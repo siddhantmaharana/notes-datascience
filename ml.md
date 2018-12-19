@@ -3,7 +3,7 @@
 ## Baeysian Statistics
 
 
-1. How would you use Naive Bayes classifier for categorical features? What if some features are numerical?
+### How would you use Naive Bayes classifier for categorical features? What if some features are numerical?
 
 Naive Bayes:
 The first assumption in the NB approach is that the features are independent. 
@@ -12,7 +12,7 @@ For numerical data:
 A common technique in NBC is to recode the feature (variable) values into quartiles, such that values less than the 25th percentile are assigned a 1, 25th to 50th a 2, 50th to 75th a 3 and greater than the 75th percentile a 4. Thus a single object will deposit one count in bin Q1, Q2, Q3, or Q4. Calculations are merely done on these categorical bins. Bin counts (probabilities) are then based on the number of samples whose variable values fall within a given bin.
 
 
-2. Is Naïve Bayes bad? If yes, under what aspects.
+### Is Naïve Bayes bad? If yes, under what aspects.
 
 Naive Bayes
 	Pros
@@ -25,7 +25,7 @@ https://github.com/ctufts/Cheat_Sheets/wiki/Classification-Model-Pros-and-Cons
 
 
 
-3. What do you understand by conjugate-prior with respect to Naïve Bayes?
+### What do you understand by conjugate-prior with respect to Naïve Bayes?
 
 Posterior = Likelihood * prior/denominator 
 If prior is taken from a normal dist, posterior is also a nornal dist
@@ -34,13 +34,13 @@ more on this https://www.youtube.com/watch?v=aPNrhR0dFi8
 
 ## Bias Variance Tradeoff
 
-1. Bootstrapping - how and why it is used?
+### Bootstrapping - how and why it is used?
 
 The bootstrap method is a resampling technique used to estimate statistics on a population by sampling a dataset with replacement.
 It can be used to estimate summary statistics such as the mean or standard deviation.
 
 
-2. Define Bias and Variance.
+### Define Bias and Variance.
 
 Bias refers to the error that is introduced by approximating a real-life problem, which may be extremely complicated, by a much simpler model. So, if the true relation is complex and you try to use linear regression, then it will undoubtedly result in some bias in the estimation of f(X).
 
@@ -49,13 +49,13 @@ Variance refers to the amount by which your estimate of f(X) would change if we 
 A general rule is that, as a statistical method tries to match data points more closely or when a more flexible method is used, the bias reduces, but variance increases.
 
 
-3. How does the variance of the error term change with the number of predictors, in OLS?
+### How does the variance of the error term change with the number of predictors, in OLS?
 
 Y = f(X) + e
 Here we can estimate f(x) to the best and the error associated with it is called reducible error. While e here is the irreducible error.
 We can reduce the bias by choosing complex models and including more number of predictors. But that increases the variance of the model while reducing the bias.
 
-4. What is overfitting and how to reduce them?
+### What is overfitting and how to reduce them?
 
 As we make the model more complex, the bias reduces but the model closely learns from the training data thereby overfitting the same. 
 Steps to reduce overfitting:
@@ -67,7 +67,7 @@ Steps to reduce overfitting:
 
 ## Linear Regression
 
-1. Why is R2 horrible for determining the quality of a model and name at least two better metrics. 
+### Why is R2 horrible for determining the quality of a model and name at least two better metrics. 
 
 R-squared is a statistic that often accompanies regression output. It ranges in value from 0 to 1 and is usually interpreted as summarizing the percent of variation in the response that the regression model explains. So an R-squared of 0.65 might mean that the model explains about 65% of the variation in our dependent variable. 
 
@@ -89,12 +89,12 @@ BIC (or Bayesian information criteria) is a variant of AIC with a stronger penal
 Mallows Cp: A variant of AIC developed by Colin Mallows.
 
 
-2. Why is linear regression called linear?
+### Why is linear regression called linear?
 
 Linear regression is called linear because you model your output variable (lets call it f(x)) as a linear combination of inputs and weights (lets call them x and w respectively). 
 
 
-3. What are the assumptions that standard linear regression models with standard estimation techniques make? How can some of these assumptions be relaxed?
+### What are the assumptions that standard linear regression models with standard estimation techniques make? How can some of these assumptions be relaxed?
 
 Linear regression is an analysis that assesses whether one or more predictor variables explain the dependent (criterion) variable.  The regression has five key assumptions:
 
@@ -117,22 +117,25 @@ If the error terms are correlated, the estimated standard errors tend to underes
 Homoscedasticity: The scatter plot is good way to check whether the data are homoscedastic (meaning the residuals are equal across the regression line). The Goldfeld-Quandt Test can also be used to test for heteroscedasticity.
 https://www.analyticsvidhya.com/blog/2016/07/deeper-regression-analysis-assumptions-plots-solutions/
 
-4. What do the following parts of a linear regression signify? p-value, coefficient, R-Squared value. 
+### What do the following parts of a linear regression signify? p-value, coefficient, R-Squared value. 
 
 R-square value tells you how much variation is explained by your model. The greater R-square the better the model.
 P-value is the "probability" attached to the likelihood of getting your data results (or those more extreme) for the model you have. It is attached to the F statistic that tests the overall explanatory power for a model based on that data (or data more extreme).
 Regression coefficients represent the mean change in the response variable for one unit of change in the predictor variable while holding other predictors in the model constant.
 
-5. Could you explain some of the extension of linear models like Splines or LOESS/LOWESS?
+### Could you explain some of the extension of linear models like Splines or LOESS/LOWESS?
 
-Regression Splines use a combination of linear/polynomial functions to fit the data. 
-Polynomial regression has a tendency to drastically over-fit, even on this simple one dimensional data set. In order to overcome the disadvantages of polynomial regression, we can use an improved regression technique which, instead of building one model for the entire dataset, divides the dataset into multiple bins and fits each bin with a separate model
+- Regression Splines use a combination of linear/polynomial functions to fit the data. 
+- Polynomial regression has a tendency to drastically over-fit, even on this simple one dimensional data set. In order to overcome the disadvantages of polynomial regression, we can use an improved regression technique which, instead of building one model for the entire dataset, divides the dataset into multiple bins and fits each bin with a separate model.
+- The points where the division occurs are called Knots. Functions which we can use for modelling each piece/bin are known as Piecewise functions.
+- To maintain the continuity of the piecewise polynomoial functions along various knots, first/second derivative constraints can be imposed. These are cubic splines. 
+- To check the erratic behaviour of splines near the boundaries, Natural splines can be considered which adds a linear constraint near the boundaries to reduce the variance.
 
-6. Do you consider the models Y~X1+X2+X1X2 and Y~X1+X2+X1X2 to be linear? Why?
-7. In linear regression, under what condition R^2 always equals a perfect 1?
-8. What are the basic assumptions to be made for linear regression?
-9. What are the constraints you need to keep in mind when using a linear regression?
-10. What is heteroskedasticity and how to solve it
-11. What is the difference between logistic and linear regression? How do you avoid local minima?
+### In linear regression, under what condition R^2 always equals a perfect 1?
 
+Mathematically R square = 1 - (SSE/SST)
+Where SSE is the sum of squared errors of our regression model
+And SST is the sum of squared errors of our baseline model.
+
+If SSE is equal to 0, i,e the model perfectly fits the data, then SSE=0 , making the R square perfectly equal to 1
 

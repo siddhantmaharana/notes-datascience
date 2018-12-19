@@ -1,4 +1,4 @@
-### How to choose KPIS?
+## How to choose KPIS?
 KPIs are qunatifiable measurements of data points used to gauge the performance of the company relative to some goal.
 These vary based on the goals and the size of the opportunity.
 Eg of Goals and KPIS:
@@ -6,7 +6,7 @@ Increasing sales: daily/weekly sales, conversion rate
 Improving ROI on marketing: Conversion rate, Abandoment cart rate Competive pricing trend
 Improving customer service: Customer NPS, Ratings
 
-#### Types:
+## Types:
 Lagging indicators: Measure the output of something that has already happened. Eg: sales last month, hours of service delivered
 Leading indicators: These indicators measure the progress and serve as predictors of what is yet to come. Eg: Website traffic, conversion rates. 
 

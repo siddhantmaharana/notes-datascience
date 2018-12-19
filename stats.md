@@ -23,9 +23,9 @@ https://github.com/mGalarnyk/DataScienceInterview
  
 http://web.mit.edu/~csvoss/Public/usabo/stats_handout.pdf
 
-### Basic Stats
+## Basic Stats
 
-1. Are expected value and mean value different?
+### Are expected value and mean value different?
 
 The expected value is numerically the same as the average value, but it is a prediction for a specific future occurrence rather than a generalization across multiple occurrences.
 
@@ -39,7 +39,7 @@ Suppose that in a sequence of ten rolls of the die, if the outcomes are 5, 2, 6,
 We say that the average value is 3.0, with the distance of 0.5 from the expectation value of 3.5. If we roll the die N times, where N is very large, then the average will converge to the expected value, i.e.,(X)average=(X)expected. This is evidently because, when N is very large each possible value of X (i.e. 1 to 6) will occur with equal probability of 1/6, turning the average to the expectation value.
 
 
-2. Do you know what Type-I/Type-II errors are?
+### Do you know what Type-I/Type-II errors are?
 
 Type I:
 
@@ -52,7 +52,7 @@ Type II:
 	- To reduce the probability of a type 2 error (because the consequences could be severe as well), you can either increase the sample size or choose an alternative value of the parameter in question that is further from the null value.
 
 
-3. What are p-values and confidence intervals?
+### What are p-values and confidence intervals?
 
 p value:
 
@@ -70,14 +70,14 @@ Confidence Intervals:
 		- If the confidence interval does not contain the null hypothesis value, the results are statistically significant.
 		- If the P value is less than alpha, the confidence interval will not contain the null hypothesis value.
 
-4. What do you do when n is small? How do you quantify uncertainty? Pick one strategy and explain how to make decisions under uncertainty?
+### What do you do when n is small? How do you quantify uncertainty? Pick one strategy and explain how to make decisions under uncertainty?
 
 For comaparing means, two sample t-test can perform accurate. However for comparing variance, the Fisher Exact Test tends to perform better.
 
 Using confidence intervals provides a better method for estimating the unknown population average.
 
 
-5. What is the Central Limit Theorem and why is it important in data science?
+### What is the Central Limit Theorem and why is it important in data science?
 
 Let’s say you are studying the population of beer drinkers in the US. You’d like to understand the mean age of those people but you don’t have time to survey the entire US population.
 
@@ -87,18 +87,18 @@ The statement of the theorem says that the sampling distribution, the distributi
 
 CLT is essential to make statistical assumptions about the data. Concepts of confidence intervals and hypothesis testing are based on CLT.
 
-6. What is the distribution of p-value’s, in general?
+### What is the distribution of p-value’s, in general?
 
  P-values under the null are uniformly distributed.
 
 
-7. What is the normal distribution? Give an example of some variable that follows this distribution
+### What is the normal distribution? Give an example of some variable that follows this distribution
 
 A normal distribution has a bell-shaped density curve described by its mean mu and standard deviation s  . The density curve is symmetrical, centered about its mean, with its spread determined by its standard deviation. 
 The Standard Normal curve, has mean 0 and standard deviation 1. 
 
 
-8. What is t-Test/F-Test/ANOVA? When to use it?
+### What is t-Test/F-Test/ANOVA? When to use it?
 
 The F-test is designed to test if two population variances are equal. It does this by comparing the ratio of two variances. So, if the variances are equal, the ratio of the variances will be 1. 
 
@@ -114,7 +114,7 @@ Eg: Mean IQ scores for 3 different schools (m= groups, n = data points in each g
 - If numerator is much more it tells us that the variation is due to variation between them than within them. If the denom is larger suggesting that the variation comes mostly from the variation within the group making it difficult to reject H0
 - Calculate the critical f value or p value and then conclude.
 
-9. What summary statistics do you know?
+### What summary statistics do you know?
 
 Measure of Central tendency: 
 
@@ -133,7 +133,7 @@ Measure of spread:
 	 x̅ is the mean and n is the sample size, as usual. m3 is called the third moment of the data set. m2 is the variance, the square of the standard deviation.
  	
 
-10. How would you calculate needed sample size?
+### How would you calculate needed sample size?
 
 - Need to determine confidence level and margin of error(5 or 10%)
 - Can calculate z score from it.
@@ -141,19 +141,19 @@ Measure of spread:
 Necessary Sample Size = (Z-score)2 * StdDev * (1-StdDev) / (margin of error)2
 
 
-11. how would you calculate the degrees of freedom of an interaction
+### how would you calculate the degrees of freedom of an interaction
 
 The degrees of freedom in a statistical calculation represent how many values involved in a calculation have the freedom to vary.
 The degrees of freedom can be calculated to help ensure the statistical validity of chi-square tests, t-tests and even the more advanced f-tests. These tests are commonly used to compare observed data with data that would be expected to be obtained according to a specific hypothesis.
 
 
-12. How would you find the median of a very large dataset?
+### How would you find the median of a very large dataset?
 
 
 If the values are discrete and the number of distinct values isn't too high, you could just accumulate the number of times each value occurs in a histogram, then find the median from the histogram counts (just add up counts from the top and bottom of the histogram until you reach the middle). Or if they're continuous values, you could distribute them into bins - that wouldn't tell you the exact median but it would give you a range, and if you need to know more precisely you could iterate over the list again, examining only the elements in the central bin.
 
 
-13. How would you measure distance between data points?
+### How would you measure distance between data points?
 
 Euclidean distance is the most common use of distance. In most cases when people said about distance, they will refer to Euclidean distance. Euclidean distance is also known as simply distance. When data is dense or continuous, this is the best proximity measure.The Pythagorean theorem gives this distance between two points.
 
@@ -168,7 +168,7 @@ The Jaccard similarity measures the similarity between finite sample sets and is
 https://tekmarathon.com/2015/11/15/different-similaritydistance-measures-in-machine-learning/
 
 
-14. How would you remove multicollinearity?
+### How would you remove multicollinearity?
 
 In regression, "multicollinearity" refers to predictors that are correlated with other predictors.  Multicollinearity occurs when your model includes multiple factors that are correlated not just to your response variable, but also to each other. In other words, it results when you have factors that are a bit redundant.
 
@@ -181,7 +181,7 @@ If you have two or more factors with a high VIF, remove one from the model. Beca
 Use Partial Least Squares Regression (PLS) or Principal Components Analysis, regression methods that cut the number of predictors to a smaller set of uncorrelated components.
 
 
-15. What is collinearity and what to do with it?
+### What is collinearity and what to do with it?
 
 Collinearity occurs when two predictor variables (e.g., x1 and x2) in a multiple regression have a non-zero correlation. Multicollinearity occurs when more than two predictor variables (e.g., x1, x2 and x3) are inter-correlated. 
 
@@ -192,7 +192,7 @@ http://psychologicalstatistics.blogspot.com/2013/11/multicollinearity-and-collin
 
 
 
-16. What is the difference between squared error and absolute error?
+### What is the difference between squared error and absolute error?
 
 In squared error, you are penalizing large deviations more. Square a big number, and it becomes much larger, relative to the others. Root Mean Square Error (RMSE) basically tells you to avoid models that give you occasional large errors.
 
@@ -200,12 +200,12 @@ Mean absolute deviation (MAD) says that being one standard deviation away and fi
 
 MSE has nice mathematical properties which makes it easier to compute the gradient.
 
-17. What is the null hypothesis? How do we state it?
+### What is the null hypothesis? How do we state it?
 
 A null hypothesis is a precise statement about a population that we try to reject with sample data.
 Often -but not always- the null hypothesis states there is no association or difference between variables or subpopulations.
 
-18. When do we need the intercept term and when do we not?
+### When do we need the intercept term and when do we not?
 
 The intercept (often labeled the constant) is the expected mean value of Y when all X=0.
 
@@ -215,7 +215,7 @@ Basically there is only one reason to perform a regression without using the int
 
 ## Distributions
 
-1. What is a random variable? PMF, CDF?
+### What is a random variable? PMF, CDF?
 
 A random variable, usually written X, is a variable whose possible values are numerical outcomes of a random phenomenon. There are two types of random variables, discrete and continuous.
 
@@ -226,7 +226,7 @@ All random variables (discrete and continuous) have a cumulative distribution fu
 A continuous random variable is one which takes an infinite number of possible values. Continuous random variables are usually measurements. Examples include height, weight, the amount of sugar in an orange, the time required to run a mile.
 
 
-2. Describe a non-normal probability distribution and how to apply it.
+### Describe a non-normal probability distribution and how to apply it.
 
 Many data sets naturally fit a non normal model. 
 For example, the number of accidents tends to fit a Poisson distribution and lifetimes of products usually fit a Weibull distribution.
@@ -237,7 +237,7 @@ Otherwise non parametric tests (https://www.statisticshowto.datasciencecentral.c
 Mann-Whitney U test is the nonparametric equivalent of the two sample t-test. While the t-test makes an assumption about the distribution of a population (i.e. that the sample came from a t-distributed population), the Mann Whitney U Test makes no such assumption.
 
 
-3. Do you know the Dirichlet distribution? How does it differ from the multinomial distribution?
+### Do you know the Dirichlet distribution? How does it differ from the multinomial distribution?
 
 The dirichlet distribution is a probability distribution as well - but it is not sampling from the space of real numbers. Instead it is sampling over a probability simplex.
 
@@ -255,7 +255,7 @@ Multinomial: suppose that each experiment results in one of k possible outcomes 
 
 The primary difference between Dirichlet and multinomial distributions is that Dirichlet random variables are real-valued, where each element of the vector is in the interval [0, 1], and multinomial random variables are integer-valued.
 
-4. Explain what a long-tailed distribution is and provide three examples of relevant phenomena that have long tails. Why are they important in classification and prediction problems?
+### Explain what a long-tailed distribution is and provide three examples of relevant phenomena that have long tails. Why are they important in classification and prediction problems?
 
 Generally, this describes a feature of a distribution where the probability of increasingly large numbers (generally) monotonically decreases.
 
@@ -263,13 +263,13 @@ Two such examples of such distributions include a power-law distribution(long ta
 
 A good example of a power law distribution is the number of airports a uniformly random chosen airport has direct flights to. 
 
-4. Give examples of data that does not have a Gaussian distribution, or log-normal.
+### Give examples of data that does not have a Gaussian distribution, or log-normal.
 
 There are quite a few different reasons why non-normal distributions many occur. One of the main reasons involves extreme values. Logically, a few extreme values can really offset data, in order to fix this scenario the data must be checked and should be evaluated for things like data-entry errors and measurement errors. If errors are found, those pieces of data should be removed. Another cause of non-normal distribution could include insufficient data discrimination; this means that there are an insufficient number of different values.
 Examples: people's incomes; mileage on used cars for sale; reaction times in a psychology experiment; house prices; number of accident claims by an insurance customer; number of children in a family.
 
 
-5. How would you check if a distribution is close to Normal? Why would you want to check it? What is a QQ Plot?
+### How would you check if a distribution is close to Normal? Why would you want to check it? What is a QQ Plot?
 
 Visual methods: Density plot and Q-Q plot can be used to check normality visually.
 Statistical tests:  Kolmogorov-Smirnov (K-S) normality test and Shapiro-Wilk’s test.
@@ -278,36 +278,36 @@ Statistical tests:  Kolmogorov-Smirnov (K-S) normality test and Shapiro-Wilk’s
 A Q-Q plot is a scatterplot created by plotting two sets of quantiles against one another. Q-Q plots take your sample data, sort it in ascending order, and then plot them versus quantiles calculated from a theoretical distribution. 
 
 
-6. How would you find an anomaly in a distribution?
+### How would you find an anomaly in a distribution?
 
 Detecting anlomalies:
 - Outlier detection: Almost impossible values can be considered anomalies. When the value deviates too much from the mean, let’s say by ± 4σ, then we can considerate this almost impossible value to be anomalous.
 - Detecting a change in the normal distribution. To detect this kind of anomaly we use a “window” containing the n most recent elements. If the mean and standard derivation of this window change too much from their expected values, we can deduce an anomaly. 
 
 
-7. What is an interaction?
+### What is an interaction?
 
 Interaction effects occur when the effect of one variable depends on the value of another variable.
 http://statisticsbyjim.com/regression/interaction-effects/
 
-8. What is Power analysis?
+### What is Power analysis?
 
 Power analysis is an important aspect of experimental design. It allows us to determine the sample size required to detect an effect of a given size with a given degree of confidence. 
 
 
 
-9. What are confounding variables?
+### What are confounding variables?
 
 A confounding variable is an “extra” variable that you didn’t account for. They can ruin an experiment and give you useless results. They can suggest there is correlation when in fact there isn’t. They can even introduce bias. 
 
 
-10. What is a selection bias?
+### What is a selection bias?
 
 Selection bias is the term used to describe the situation where an analysis has been conducted among a subset of the data (a sample) with the goal of drawing conclusions about the population, but the resulting conclusions will likely be wrong (biased), because the subgroup differs from the population in some important way. Selection bias is usually introduced as an error with the sampling and having a selection for analysis that is not properly randomized
 
 
 
-#### A/B testing
+## A/B testing
 It is a way of conducting an experiment where you compare a control group to the performance of one or more test groups.
 - Eg: Conversion rate of a web page: 
 	- Subjected to 3 treatments(Adding layout, change in headings, Changing the color/text)
