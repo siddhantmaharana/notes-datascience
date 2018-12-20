@@ -364,3 +364,32 @@ Mean Absolute Error is the average of the difference between the Original Values
 ### Mean Squared Error
 Mean Squared Error(MSE) is quite similar to Mean Absolute Error, the only difference being that MSE takes the average of the square of the difference between the original values and the predicted values.
 
+
+
+## Clustering
+
+Clustering is the task of dividing the population or data points into a number of groups such that data points in the same groups are more similar to other data points in the same group than those in other groups. In simple words, the aim is to segregate groups with similar traits and assign them into clusters.
+
+### K Means Clustering
+K means is an iterative clustering algorithm that aims to find local maxima in each iteration. Steps involved include:
+ - Specify the desired number of clusters K : Let us choose k=2 for these 5 data points in 2-D space.
+ - Randomly assign each data point to a cluster
+ - Compute cluster centroids
+ - Re-assign each point to the closest cluster centroid
+ - Re-compute cluster centroids
+ - Repeat steps 4 and 5 until no improvements are possible
+
+### Hierarchical Clustering
+Hierarchical clustering, as the name suggests is an algorithm that builds hierarchy of clusters. This algorithm starts with all the data points assigned to a cluster of their own. Then two nearest clusters are merged into the same cluster. In the end, this algorithm terminates when there is only a single cluster left.
+
+- The results of hierarchical clustering can be shown using dendrogram.
+- Hierarchical clustering can’t handle big data well but K Means clustering can. This is because the time complexity of K Means is linear i.e. O(n) while that of hierarchical clustering is quadratic i.e. O(n2).
+
+
+### How is KNN different from k-means clustering?
+
+K-Nearest Neighbors is a supervised classification algorithm.  It requires labeled data to train.  Given the labeled points, KNN will classify new, unlabeled data by looking at the ‘k’ number of nearest data points.  The variable ‘k’ is a parameter that will be set by the machine learning engineer.
+
+
+K-means clustering is an unsupervised clustering algorithm.  It requires unlabeled data to train.  Given the unlabeled points and some ‘k’ number of clusters, k-means clustering will gradually learn how to cluster the unlabeled points into groups by computing the mean distance between the points.
+
