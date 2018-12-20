@@ -1,5 +1,5 @@
 # Statistics
-https://github.com/mGalarnyk/DataScienceInterview
+
 ## Definitions and theory
 
 - Definition of Population, Sample, Mean, Median, Variance, SD, Standard Error

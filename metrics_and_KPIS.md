@@ -1,4 +1,5 @@
 ## How to choose KPIS?
+
 KPIs are qunatifiable measurements of data points used to gauge the performance of the company relative to some goal.
 These vary based on the goals and the size of the opportunity.
 Eg of Goals and KPIS:
@@ -7,11 +8,13 @@ Improving ROI on marketing: Conversion rate, Abandoment cart rate Competive pric
 Improving customer service: Customer NPS, Ratings
 
 ## Types:
+
 Lagging indicators: Measure the output of something that has already happened. Eg: sales last month, hours of service delivered
 Leading indicators: These indicators measure the progress and serve as predictors of what is yet to come. Eg: Website traffic, conversion rates. 
 
 
 ### Customer experience Metrics
+
 Tracking and benchmarking custome experince metrics can be a way for the companies to improve the same.
 1. Net Promoter Score(NPS): 
 It is the percentage of your customers who would or wouldn't recommend your company to their friends, family or colleagues. Calculated by subtracting the detractors from the promoters.
@@ -38,6 +41,7 @@ Avg time it takes to resolve a customer issue from start to finish
 
 
 ### If a KPI is going up/down? How to do a RCA?
+
 - breakdown the KPI’s into what consists them and find where the change is
 - then further breakdown that basic KPI by channel, user cluster, etc. and relate them with any campaigns, changes in user behaviors in that segment
 
