@@ -161,7 +161,7 @@ from (
     group by email
 )
 where email_count>1;
-OR
+--OR
 select 
 email
 from Employee 
